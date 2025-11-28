@@ -4,10 +4,10 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/aqua777/ai-flow/llm/iface"
-	"github.com/aqua777/ai-flow/llm/models"
-	"github.com/aqua777/ai-flow/vectordb/v1/schema"
-	"github.com/aqua777/ai-flow/vectordb/v1"
+	store "github.com/aqua777/ai-nexus/vectordb/v1"
+	"github.com/aqua777/ai-nexus/llm/iface"
+	"github.com/aqua777/ai-nexus/llm/models"
+	"github.com/aqua777/ai-nexus/vectordb/v1/schema"
 )
 
 // VectorRetriever retrieves relevant nodes using a vector store and embedding model.

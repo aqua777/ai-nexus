@@ -4,9 +4,9 @@ import (
 	"context"
 	"testing"
 
-	mock_llm "github.com/aqua777/ai-flow/mocks/llm"
-	"github.com/aqua777/ai-flow/vectordb/v0/go-chromem"
-	"github.com/aqua777/ai-flow/vectordb/v0/models"
+	mock_llm "github.com/aqua777/ai-nexus/mocks/llm"
+	"github.com/aqua777/ai-nexus/vectordb/v0/go-chromem"
+	"github.com/aqua777/ai-nexus/vectordb/v0/models"
 	"github.com/stretchr/testify/suite"
 )
 

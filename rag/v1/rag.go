@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/aqua777/ai-flow/textsplitter"
-	"github.com/aqua777/ai-flow/vectordb/v0/iface"
-	"github.com/aqua777/ai-flow/vectordb/v0/models"
+	"github.com/aqua777/ai-nexus/textsplitter"
+	"github.com/aqua777/ai-nexus/vectordb/v0/iface"
+	"github.com/aqua777/ai-nexus/vectordb/v0/models"
 )
 
 // Service provides RAG (Retrieval Augmented Generation) capabilities

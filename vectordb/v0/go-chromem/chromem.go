@@ -4,10 +4,10 @@ import (
 	"context"
 	"fmt"
 
-	llm_iface "github.com/aqua777/ai-flow/llm/iface"
-	llm_models "github.com/aqua777/ai-flow/llm/models"
-	"github.com/aqua777/ai-flow/vectordb/v0/iface"
-	"github.com/aqua777/ai-flow/vectordb/v0/models"
+	llm_iface "github.com/aqua777/ai-nexus/llm/iface"
+	llm_models "github.com/aqua777/ai-nexus/llm/models"
+	"github.com/aqua777/ai-nexus/vectordb/v0/iface"
+	"github.com/aqua777/ai-nexus/vectordb/v0/models"
 	chromem "github.com/philippgille/chromem-go"
 )
 

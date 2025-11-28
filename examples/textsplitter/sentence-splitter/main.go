@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/aqua777/ai-flow/examples/textsplitter/sentence-splitter/funcs"
+	"github.com/aqua777/ai-nexus/examples/textsplitter/sentence-splitter/funcs"
 )
 
 func main() {

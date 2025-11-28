@@ -4,8 +4,8 @@ import (
 	"context"
 	"errors"
 
-	"github.com/aqua777/ai-flow/llm/iface"
-	"github.com/aqua777/ai-flow/llm/models"
+	"github.com/aqua777/ai-nexus/llm/iface"
+	"github.com/aqua777/ai-nexus/llm/models"
 )
 
 type (

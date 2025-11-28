@@ -3,8 +3,8 @@ package llm
 import (
 	"context"
 
-	llm_iface "github.com/aqua777/ai-flow/llm/iface"
-	llm_models "github.com/aqua777/ai-flow/llm/models"
+	llm_iface "github.com/aqua777/ai-nexus/llm/iface"
+	llm_models "github.com/aqua777/ai-nexus/llm/models"
 )
 
 type MockLLM struct{}

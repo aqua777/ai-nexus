@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/aqua777/ai-flow/llm/iface"
-	"github.com/aqua777/ai-flow/llm/models"
-	"github.com/aqua777/ai-flow/vectordb/v1/schema"
+	"github.com/aqua777/ai-nexus/llm/iface"
+	"github.com/aqua777/ai-nexus/llm/models"
+	"github.com/aqua777/ai-nexus/vectordb/v1/schema"
 )
 
 // SimpleSynthesizer generates a response by stuffing retrieved context into a prompt.

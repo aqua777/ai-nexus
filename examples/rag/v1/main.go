@@ -7,13 +7,13 @@ import (
 	"log"
 	"os"
 
-	"github.com/aqua777/ai-flow/llm/ollama"
-	"github.com/aqua777/ai-flow/rag/v1"
-	"github.com/aqua777/ai-flow/textsplitter"
-	"github.com/aqua777/ai-flow/vectordb/v0/go-chromem"
-	vdb_models "github.com/aqua777/ai-flow/vectordb/v0/models"
+	"github.com/aqua777/ai-nexus/llm/ollama"
+	"github.com/aqua777/ai-nexus/rag/v1"
+	"github.com/aqua777/ai-nexus/textsplitter"
+	"github.com/aqua777/ai-nexus/vectordb/v0/go-chromem"
+	vdb_models "github.com/aqua777/ai-nexus/vectordb/v0/models"
 
-	ssExample "github.com/aqua777/ai-flow/examples/textsplitter/sentence-splitter/funcs"
+	ssExample "github.com/aqua777/ai-nexus/examples/textsplitter/sentence-splitter/funcs"
 )
 
 var _ = os.Args

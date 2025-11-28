@@ -2,14 +2,15 @@ package main
 
 import (
 	"context"
+	"flag"
 	"fmt"
 	"log"
-	"os"
-	"flag"
 	"log/slog"
-	_ "github.com/aqua777/ai-flow/dotenv"
-	"github.com/aqua777/ai-flow/llm/models"
-	"github.com/aqua777/ai-flow/llm/openai"
+	"os"
+
+	_ "github.com/aqua777/ai-nexus/dotenv"
+	"github.com/aqua777/ai-nexus/llm/models"
+	"github.com/aqua777/ai-nexus/llm/openai"
 )
 
 func main() {

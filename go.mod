@@ -1,4 +1,4 @@
-module github.com/aqua777/ai-flow
+module github.com/aqua777/ai-nexus
 
 go 1.24
 

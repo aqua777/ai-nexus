@@ -6,16 +6,16 @@ import (
 	"log"
 	"os"
 
-	"github.com/aqua777/ai-flow/llm/iface"
-	"github.com/aqua777/ai-flow/llm/models"
+	"github.com/aqua777/ai-nexus/llm/iface"
+	"github.com/aqua777/ai-nexus/llm/models"
 
-	// llm_openai "github.com/aqua777/ai-flow/llm/openai"
-	"github.com/aqua777/ai-flow/rag/v2/reader"
-	"github.com/aqua777/ai-flow/textsplitter"
-	store "github.com/aqua777/ai-flow/vectordb/v1"
-	"github.com/aqua777/ai-flow/vectordb/v1/schema"
+	// llm_openai "github.com/aqua777/ai-nexus/llm/openai"
+	"github.com/aqua777/ai-nexus/rag/v2/reader"
+	"github.com/aqua777/ai-nexus/textsplitter"
+	store "github.com/aqua777/ai-nexus/vectordb/v1"
+	"github.com/aqua777/ai-nexus/vectordb/v1/schema"
 
-	// "github.com/aqua777/ai-flow/vectordb/v1/chromem"
+	// "github.com/aqua777/ai-nexus/vectordb/v1/chromem"
 	"github.com/google/uuid"
 	// openai "github.com/sashabaranov/go-openai"
 )

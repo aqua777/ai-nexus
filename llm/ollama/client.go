@@ -3,8 +3,8 @@ package ollama
 import (
 	"context"
 
-	"github.com/aqua777/ai-flow/http"
-	"github.com/aqua777/ai-flow/llm/models"
+	"github.com/aqua777/ai-nexus/http"
+	"github.com/aqua777/ai-nexus/llm/models"
 )
 
 // const (

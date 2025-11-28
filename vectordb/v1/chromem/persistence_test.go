@@ -5,7 +5,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/aqua777/ai-flow/vectordb/v1/schema"
+	"github.com/aqua777/ai-nexus/vectordb/v1/schema"
 )
 
 func TestChromemPersistence(t *testing.T) {

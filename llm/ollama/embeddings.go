@@ -3,7 +3,8 @@ package ollama
 import (
 	"context"
 	"fmt"
-	"github.com/aqua777/ai-flow/llm/models"
+
+	"github.com/aqua777/ai-nexus/llm/models"
 )
 
 type OllamaEmbeddingRequest struct {
@@ -12,7 +13,7 @@ type OllamaEmbeddingRequest struct {
 }
 
 type OllamaEmbeddingResponse struct {
-	Model string `json:"model"`
+	Model      string      `json:"model"`
 	Embeddings [][]float32 `json:"embeddings"`
 }
 

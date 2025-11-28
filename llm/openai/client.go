@@ -5,8 +5,8 @@ import (
 	"errors"
 	"io"
 
-	"github.com/aqua777/ai-flow/llm/iface"
-	"github.com/aqua777/ai-flow/llm/models"
+	"github.com/aqua777/ai-nexus/llm/iface"
+	"github.com/aqua777/ai-nexus/llm/models"
 	openai "github.com/sashabaranov/go-openai"
 )
 
@@ -124,7 +124,7 @@ func (c *Client) Chat(ctx context.Context, r *models.ChatRequest, stream ...func
 	}
 
 	content := resp.Choices[0].Message.Content
-	
+
 	return &models.ChatResponse{
 		Content: content,
 		Metadata: &models.ChatResponseMetadata{
@@ -164,7 +164,7 @@ func (c *Client) streamChat(ctx context.Context, req openai.ChatCompletionReques
 		}
 	}
 
-	// Streaming response usually doesn't have full usage stats in the stream chunks easily aggregated 
+	// Streaming response usually doesn't have full usage stats in the stream chunks easily aggregated
 	// without counting tokens ourselves, returning basic response.
 	return &models.ChatResponse{
 		Content: fullContent,
@@ -193,4 +193,3 @@ func (c *Client) Embeddings(ctx context.Context, cr *models.EmbeddingsRequest) (
 		Embeddings: resp.Data[0].Embedding,
 	}, nil
 }
-

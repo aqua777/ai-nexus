@@ -3,7 +3,7 @@ package iface
 import (
 	"context"
 
-	"github.com/aqua777/ai-flow/llm/models"
+	"github.com/aqua777/ai-nexus/llm/models"
 )
 
 type LLM interface {

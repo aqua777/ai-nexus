@@ -7,8 +7,8 @@ import (
 	"log/slog"
 	"os"
 
-	"github.com/aqua777/ai-flow/llm/models"
-	"github.com/aqua777/ai-flow/llm/ollama"
+	"github.com/aqua777/ai-nexus/llm/models"
+	"github.com/aqua777/ai-nexus/llm/ollama"
 )
 
 var model string = os.Getenv("OLLAMA_MODEL")

@@ -10,7 +10,7 @@ It supports:
 ## Installation
 
 ```bash
-go get github.com/aqua777/ai-flow/textsplitter
+go get github.com/aqua777/ai-nexus/textsplitter
 ```
 
 ## Usage
@@ -24,7 +24,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/aqua777/ai-flow/textsplitter"
+	"github.com/aqua777/ai-nexus/textsplitter"
 )
 
 func main() {
@@ -55,7 +55,7 @@ package main
 import (
 	"fmt"
 	"log"
-	"github.com/aqua777/ai-flow/textsplitter"
+	"github.com/aqua777/ai-nexus/textsplitter"
 )
 
 func main() {
@@ -85,7 +85,7 @@ package main
 import (
 	"fmt"
 	"log"
-	"github.com/aqua777/ai-flow/textsplitter"
+	"github.com/aqua777/ai-nexus/textsplitter"
 )
 
 func main() {

@@ -3,7 +3,7 @@ package funcs
 import (
 	"fmt"
 
-	splitter "github.com/aqua777/ai-flow/textsplitter"
+	splitter "github.com/aqua777/ai-nexus/textsplitter"
 )
 
 func GetChunkLengths(chunks []string) []int {

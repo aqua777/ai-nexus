@@ -6,11 +6,11 @@ import (
 
 	"github.com/stretchr/testify/suite"
 
-	"github.com/aqua777/ai-flow/llm/iface"
-	"github.com/aqua777/ai-flow/llm/models"
-	"github.com/aqua777/ai-flow/vectordb/v1/schema"
-	"github.com/aqua777/ai-flow/vectordb/v1"
-	"github.com/aqua777/ai-flow/vectordb/v1/chromem"
+	"github.com/aqua777/ai-nexus/llm/iface"
+	"github.com/aqua777/ai-nexus/llm/models"
+	"github.com/aqua777/ai-nexus/vectordb/v1"
+	"github.com/aqua777/ai-nexus/vectordb/v1/chromem"
+	"github.com/aqua777/ai-nexus/vectordb/v1/schema"
 )
 
 // MockRetriever is a mock implementation of the Retriever interface.

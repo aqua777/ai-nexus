@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/aqua777/ai-flow/llm/models"
-	"github.com/aqua777/ai-flow/llm/thinking"
+	"github.com/aqua777/ai-nexus/llm/models"
+	"github.com/aqua777/ai-nexus/llm/thinking"
 )
 
 type OllamaChatCompletionRequest struct {

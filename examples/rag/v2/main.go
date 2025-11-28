@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/aqua777/ai-flow/llm/openai"
-	"github.com/aqua777/ai-flow/rag/v2"
-	"github.com/aqua777/ai-flow/llm/ollama"
-	"github.com/aqua777/ai-flow/vectordb/v1/chromem"
+	"github.com/aqua777/ai-nexus/llm/ollama"
+	"github.com/aqua777/ai-nexus/llm/openai"
+	"github.com/aqua777/ai-nexus/rag/v2"
+	"github.com/aqua777/ai-nexus/vectordb/v1/chromem"
 )
 
 var (
@@ -54,7 +54,7 @@ func main() {
 		FileExtensions: []string{".txt", ".md", ".not-txt"},
 	}
 
-			// Vector Store
+	// Vector Store
 	// ChromemStore implements VectorStore interface
 	vectorStore, err := chromem.NewChromemStore(config.PersistPath, config.CollectionName)
 	if err != nil {

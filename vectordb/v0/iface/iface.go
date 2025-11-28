@@ -3,7 +3,7 @@ package iface
 import (
 	"context"
 
-	"github.com/aqua777/ai-flow/vectordb/v0/models"
+	"github.com/aqua777/ai-nexus/vectordb/v0/models"
 )
 
 type VectorDB interface {

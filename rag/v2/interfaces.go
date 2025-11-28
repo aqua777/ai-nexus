@@ -3,7 +3,7 @@ package rag
 import (
 	"context"
 
-	"github.com/aqua777/ai-flow/vectordb/v1/schema"
+	"github.com/aqua777/ai-nexus/vectordb/v1/schema"
 )
 
 // Retriever is an interface for retrieving relevant nodes based on a query.

@@ -1,12 +1,11 @@
 package main
 
-
 import (
 	"context"
 	"fmt"
 	"log/slog"
 
-	"github.com/aqua777/ai-flow/llm/ollama"
+	"github.com/aqua777/ai-nexus/llm/ollama"
 )
 
 func main() {

@@ -267,8 +267,8 @@ package provider
 
 import (
     "context"
-    "github.com/aqua777/ai-flow/llm/iface"
-    "github.com/aqua777/ai-flow/llm/models"
+    "github.com/aqua777/ai-nexus/llm/iface"
+    "github.com/aqua777/ai-nexus/llm/models"
 )
 
 type Client struct {
@@ -478,9 +478,9 @@ import (
     "fmt"
     "log"
     
-    _ "github.com/aqua777/ai-flow/dotenv"
-    "github.com/aqua777/ai-flow/llm/models"
-    "github.com/aqua777/ai-flow/llm/{provider}"
+    _ "github.com/aqua777/ai-nexus/dotenv"
+    "github.com/aqua777/ai-nexus/llm/models"
+    "github.com/aqua777/ai-nexus/llm/{provider}"
 )
 
 func main() {
@@ -723,9 +723,9 @@ import (
     "fmt"
     "log"
     
-    _ "github.com/aqua777/ai-flow/dotenv"  // Auto-load .env
-    "github.com/aqua777/ai-flow/llm/models"
-    "github.com/aqua777/ai-flow/llm/openai"
+    _ "github.com/aqua777/ai-nexus/dotenv"  // Auto-load .env
+    "github.com/aqua777/ai-nexus/llm/models"
+    "github.com/aqua777/ai-nexus/llm/openai"
 )
 
 func main() {
@@ -766,8 +766,8 @@ import (
     "context"
     "fmt"
     
-    _ "github.com/aqua777/ai-flow/dotenv"  // ← Blank import
-    "github.com/aqua777/ai-flow/llm/openai"
+    _ "github.com/aqua777/ai-nexus/dotenv"  // ← Blank import
+    "github.com/aqua777/ai-nexus/llm/openai"
 )
 ```
 
@@ -957,8 +957,8 @@ import (
     "github.com/stretchr/testify/suite"
 
     // 3. Local packages
-    "github.com/aqua777/ai-flow/llm/iface"
-    "github.com/aqua777/ai-flow/llm/models"
+    "github.com/aqua777/ai-nexus/llm/iface"
+    "github.com/aqua777/ai-nexus/llm/models"
 )
 ```
 

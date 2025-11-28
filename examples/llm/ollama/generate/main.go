@@ -3,13 +3,13 @@ package main
 import (
 	"context"
 	"encoding/json"
+	"flag"
 	"fmt"
 	"log/slog"
 	"os"
-	"flag"
-	
-	"github.com/aqua777/ai-flow/llm/models"
-	"github.com/aqua777/ai-flow/llm/ollama"
+
+	"github.com/aqua777/ai-nexus/llm/models"
+	"github.com/aqua777/ai-nexus/llm/ollama"
 )
 
 var model string = os.Getenv("OLLAMA_MODEL")
@@ -27,7 +27,7 @@ func main() {
 		slog.Error("Failed to create Ollama client", "error", err)
 	}
 	generateRequest := &models.GenerateRequest{
-		Model: model,
+		Model:  model,
 		Prompt: "Why is the sky blue?",
 	}
 	generateResponse, err := ollama.Generate(ctx, generateRequest)
