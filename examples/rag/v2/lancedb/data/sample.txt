@@ -1,0 +1,4 @@
+LanceDB is an open-source database for vector-search built with persistent storage, which greatly simplifies embedding management.
+It provides a simple API for storing, querying, and managing vector embeddings.
+This file is a sample document for the RAG v2 LanceDB demo.
+

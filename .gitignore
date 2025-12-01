@@ -2,3 +2,5 @@
 
 **/*.not-*
 **/.chromem-db
+
+deps/
