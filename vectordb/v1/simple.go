@@ -107,16 +107,18 @@ func (s *SimpleVectorStore) Query(ctx context.Context, query schema.VectorStoreQ
 	return result, nil
 }
 
-func cosineSimilarity(a, b []float64) (float64, error) {
+func cosineSimilarity(a, b []float32) (float64, error) {
 	if len(a) != len(b) {
 		return 0, errors.New("vector lengths do not match")
 	}
 
 	var dotProduct, normA, normB float64
 	for i := 0; i < len(a); i++ {
-		dotProduct += a[i] * b[i]
-		normA += a[i] * a[i]
-		normB += b[i] * b[i]
+		valA := float64(a[i])
+		valB := float64(b[i])
+		dotProduct += valA * valB
+		normA += valA * valA
+		normB += valB * valB
 	}
 
 	if normA == 0 || normB == 0 {

@@ -56,7 +56,7 @@ type RAGSystem struct {
 	Config      *RAGConfig
 	Embedder    iface.LLM
 	LLM         iface.LLM
-	VectorStore store.VectorStore
+	VectorStore store.VectorDB
 	QueryEngine *RetrieverQueryEngine
 	Splitter    *textsplitter.SentenceSplitter
 	Callbacks   IngestionCallbacks
@@ -120,7 +120,7 @@ func (s *RAGSystem) WithLLM(llmModel iface.LLM) *RAGSystem {
 	return s
 }
 
-func (s *RAGSystem) WithVectorStore(vectorStore store.VectorStore) *RAGSystem {
+func (s *RAGSystem) WithVectorStore(vectorStore store.VectorDB) *RAGSystem {
 	s.VectorStore = vectorStore
 	return s
 }
@@ -303,13 +303,8 @@ func (s *RAGSystem) ingestDocuments(ctx context.Context, docs []schema.Document)
 				return err
 			}
 
-			// Convert float32 to float64
-			embedding := make([]float64, len(resp.Embeddings))
-			for j, v := range resp.Embeddings {
-				embedding[j] = float64(v)
-			}
-
-			node.Embedding = embedding
+			// No conversion needed, already float32
+			node.Embedding = resp.Embeddings
 			allNodes = append(allNodes, node)
 		}
 	}

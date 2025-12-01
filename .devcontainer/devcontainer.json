@@ -36,6 +36,7 @@
     },
     "forwardPorts": [],
     "containerEnv": {
+        "CGO_ENABLED": "1",
         "CGO_LDFLAGS_ALLOW": "-Wl,-rpath,@executable_path",
         "OLLAMA_URL": "http://host.docker.internal:11434",
         "OLLAMA_MODEL": "jan-v1:q6_k"

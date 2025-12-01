@@ -142,8 +142,8 @@ func (s *EngineTestSuite) TestFullRAGFlow() {
 
 	// 2. Add Documents
 	nodes := []schema.Node{
-		{ID: "1", Text: "The capital of France is Paris.", Type: schema.ObjectTypeText, Embedding: []float64{0.1, 0.2, 0.3}},
-		{ID: "2", Text: "The capital of Germany is Berlin.", Type: schema.ObjectTypeText, Embedding: []float64{0.9, 0.8, 0.7}},
+		{ID: "1", Text: "The capital of France is Paris.", Type: schema.ObjectTypeText, Embedding: []float32{0.1, 0.2, 0.3}},
+		{ID: "2", Text: "The capital of Germany is Berlin.", Type: schema.ObjectTypeText, Embedding: []float32{0.9, 0.8, 0.7}},
 	}
 	_, err := vectorStore.Add(ctx, nodes)
 	s.NoError(err)
@@ -182,8 +182,8 @@ func (s *EngineTestSuite) TestFullRAGFlow_Chromem() {
 
 	// 2. Add Documents
 	nodes := []schema.Node{
-		{ID: "1", Text: "The capital of France is Paris.", Type: schema.ObjectTypeText, Embedding: []float64{0.1, 0.2, 0.3}},
-		{ID: "2", Text: "The capital of Germany is Berlin.", Type: schema.ObjectTypeText, Embedding: []float64{0.9, 0.8, 0.7}},
+		{ID: "1", Text: "The capital of France is Paris.", Type: schema.ObjectTypeText, Embedding: []float32{0.1, 0.2, 0.3}},
+		{ID: "2", Text: "The capital of Germany is Berlin.", Type: schema.ObjectTypeText, Embedding: []float32{0.9, 0.8, 0.7}},
 	}
 	_, err = chromemStore.Add(ctx, nodes)
 	s.NoError(err)

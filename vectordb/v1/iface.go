@@ -6,8 +6,8 @@ import (
 	"github.com/aqua777/ai-nexus/vectordb/v1/schema"
 )
 
-// VectorStore is the interface for storing and querying vectors.
-type VectorStore interface {
+// VectorDB is the interface for storing and querying vectors.
+type VectorDB interface {
 	// Add adds nodes to the store.
 	Add(ctx context.Context, nodes []schema.Node) ([]string, error)
 	// Query finds the top-k most similar nodes to the query embedding.

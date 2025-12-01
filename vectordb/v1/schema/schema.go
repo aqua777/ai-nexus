@@ -21,7 +21,7 @@ type Node struct {
 	Text      string                 `json:"text"`
 	Type      NodeType               `json:"type"`
 	Metadata  map[string]interface{} `json:"metadata,omitempty"`
-	Embedding []float64              `json:"embedding,omitempty"`
+	Embedding []float32              `json:"embedding,omitempty"`
 }
 
 // Document represents a document.
@@ -85,7 +85,7 @@ type StreamingEngineResponse struct {
 
 // VectorStoreQuery represents a query to the vector store.
 type VectorStoreQuery struct {
-	Embedding []float64        `json:"embedding"`
+	Embedding []float32        `json:"embedding"`
 	TopK      int              `json:"top_k"`
 	Filters   *MetadataFilters `json:"filters,omitempty"`
 }

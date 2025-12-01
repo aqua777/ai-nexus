@@ -76,11 +76,11 @@ import (
     - List models: [examples/llm/ollama/list_models](./examples/llm/ollama/list_models)
 
 - **RAG**
-  - v2 System: [rag/v2](./rag/v2)
-  - Examples: [examples/rag/v1](./examples/rag/v1), [examples/rag/v2](./examples/rag/v2)
+  - v1: [rag/v1](./rag/v1), examples: [examples/rag/v1](./examples/rag/v1)
+  - v2 System: [rag/v2](./rag/v2), examples: [examples/rag/v2](./examples/rag/v2)
 
 - **Vector DB**
-  - Chromem store: [vectordb/v1/chromem](./vectordb/v1/chromem)
+  - Chroma-like embedable in-memory or persistent vector database: [vectordb/v1/chromem](./vectordb/v1/chromem)
 
 - **HTTP**
   - Package: [http](./http)

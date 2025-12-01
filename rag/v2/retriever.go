@@ -4,22 +4,22 @@ import (
 	"context"
 	"fmt"
 
-	store "github.com/aqua777/ai-nexus/vectordb/v1"
 	"github.com/aqua777/ai-nexus/llm/iface"
 	"github.com/aqua777/ai-nexus/llm/models"
+	store "github.com/aqua777/ai-nexus/vectordb/v1"
 	"github.com/aqua777/ai-nexus/vectordb/v1/schema"
 )
 
 // VectorRetriever retrieves relevant nodes using a vector store and embedding model.
 type VectorRetriever struct {
-	vectorStore        store.VectorStore
+	vectorStore        store.VectorDB
 	embedder           iface.LLM
 	embeddingModelName string
 	topK               int
 }
 
 // NewVectorRetriever creates a new VectorRetriever.
-func NewVectorRetriever(vectorStore store.VectorStore, embedder iface.LLM, embeddingModelName string, topK int) *VectorRetriever {
+func NewVectorRetriever(vectorStore store.VectorDB, embedder iface.LLM, embeddingModelName string, topK int) *VectorRetriever {
 	return &VectorRetriever{
 		vectorStore:        vectorStore,
 		embedder:           embedder,
@@ -37,14 +37,9 @@ func (r *VectorRetriever) Retrieve(ctx context.Context, query schema.QueryBundle
 		return nil, fmt.Errorf("failed to get query embedding: %w", err)
 	}
 
-	// Convert float32 to float64
-	queryEmbedding := make([]float64, len(resp.Embeddings))
-	for i, v := range resp.Embeddings {
-		queryEmbedding[i] = float64(v)
-	}
-
+	// No conversion needed, already float32
 	storeQuery := schema.VectorStoreQuery{
-		Embedding: queryEmbedding,
+		Embedding: resp.Embeddings,
 		TopK:      r.topK,
 		Filters:   query.Filters,
 	}

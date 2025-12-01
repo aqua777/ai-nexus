@@ -66,17 +66,12 @@ func (s *ChromemStore) Add(ctx context.Context, nodes []schema.Node) ([]string, 
 			meta["_node_type"] = string(node.Type)
 		}
 
-		// Use generic float32 for chromem
-		embedding32 := make([]float32, len(node.Embedding))
-		for j, v := range node.Embedding {
-			embedding32[j] = float32(v)
-		}
-
+		// No conversion needed, already float32
 		docs[i] = chromem.Document{
 			ID:        node.ID,
 			Content:   node.Text,
 			Metadata:  meta,
-			Embedding: embedding32,
+			Embedding: node.Embedding,
 		}
 		ids[i] = node.ID
 	}
@@ -93,12 +88,6 @@ func (s *ChromemStore) Add(ctx context.Context, nodes []schema.Node) ([]string, 
 
 // Query finds the top-k most similar nodes to the query embedding.
 func (s *ChromemStore) Query(ctx context.Context, query schema.VectorStoreQuery) ([]schema.NodeWithScore, error) {
-	// Convert embedding to float32
-	queryEmbedding32 := make([]float32, len(query.Embedding))
-	for i, v := range query.Embedding {
-		queryEmbedding32[i] = float32(v)
-	}
-
 	var where map[string]string
 	var whereDocument map[string]string
 
@@ -119,7 +108,7 @@ func (s *ChromemStore) Query(ctx context.Context, query schema.VectorStoreQuery)
 		}
 	}
 
-	res, err := s.collection.QueryEmbedding(ctx, queryEmbedding32, query.TopK, where, whereDocument)
+	res, err := s.collection.QueryEmbedding(ctx, query.Embedding, query.TopK, where, whereDocument)
 	if err != nil {
 		return nil, fmt.Errorf("failed to query chromem collection: %w", err)
 	}
